@@ -1,0 +1,39 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dynamodb:PutItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:GetItem",
+        "dynamodb:Scan",
+        "dynamodb:Query"
+      ],
+      "Resource": [
+        "arn:aws:dynamodb:*:*:table/users-table-252500ee-2dfd-483d-ba64-26ed7c48d52e",
+        "arn:aws:dynamodb:*:*:table/products-table-c58faba4-5d2e-47e5-a85b-9cf85111ce22",
+        "arn:aws:dynamodb:*:*:table/orders-table-48db2ea6-727c-4f18-9e23-70614145f163"
+      ],
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ssm:GetParameter"
+      ],
+      "Resource": [
+        "arn:aws:ssm:*:*:parameter/vonavi-shop-app/auth-key"
+      ],
+      "Effect": "Allow"
+    }
+  ]
+}

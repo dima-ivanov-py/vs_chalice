@@ -1,0 +1,15 @@
+{
+  "stages": {
+    "dev": {
+      "autogen_policy": false,
+      "api_gateway_stage": "api",
+      "environment_variables": {
+        "USERS_TABLE_NAME": "users-table-252500ee-2dfd-483d-ba64-26ed7c48d52e",
+        "PRODUCTS_TABLE_NAME": "products-table-c58faba4-5d2e-47e5-a85b-9cf85111ce22",
+        "ORDERS_TABLE_NAME": "orders-table-48db2ea6-727c-4f18-9e23-70614145f163"
+      }
+    }
+  },
+  "version": "2.0",
+  "app_name": "vonavi-shop"
+}
